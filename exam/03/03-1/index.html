@@ -1,32 +1,29 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Vue Sample</title>
+    <title>Vue Instance Lifecycle</title>
   </head>
   <body>
-    Vue.js 시작
     <div id="app">
       {{ message }}
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
     <script>
       new Vue({
-        el:'#app',
-        data:{
-          message:'Hello Vue.js!'
+        el: '#app',
+        data: {
+          message: 'Hello Vue.js!'
         },
-        beforeCreate : function(){
+        beforeCreate: function() {
           console.log("beforeCreate");
         },
-        created : function(){
+        created: function() {
           console.log("created");
         },
-        mounted : function(){
+        mounted: function() {
           console.log("mounted");
-          this.message = "Hello Vue!";
         },
-        updated : function(){
+        updated: function() {
           console.log("updated");
         }
       });
